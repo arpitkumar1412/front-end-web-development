@@ -15,7 +15,21 @@
 </head>
 
 <body>
-
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand mr-auto" href="#"> Ristorante Con Fusion</a>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item active"><a class="nav-link" href="./aboutus.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -31,6 +45,10 @@
 
     <div class="container">
         <div class="row">
+          <ol class="col-12 breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active">About Us</li>
+          </ol>
             <div class="col-12">
                <h3>About Us</h3>
                <hr>
@@ -113,7 +131,10 @@
            </div>
         </div>
     </footer>
-
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
