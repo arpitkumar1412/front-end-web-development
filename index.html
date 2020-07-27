@@ -38,6 +38,10 @@
     </div>
   </nav>
 
+
+
+
+
   <div id="loginModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg" role="content">
       <div class="modal-content">
@@ -74,6 +78,62 @@
       </div>
     </div>
   </div>
+  <div id="reserveTable" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Reserve A Table</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group row">
+              <label for="optradio" class="col-12 col-sm-3 col-form-label"><strong>Number of Seats</strong></label>
+              <div class="col-12 col-sm-5">
+                <label class="radio-inline"><input type="radio" name="optradio"> 1</label>
+                <label class="radio-inline"><input type="radio" name="optradio"> 2</label>
+                <label class="radio-inline"><input type="radio" name="optradio"> 3</label>
+                <label class="radio-inline"><input type="radio" name="optradio"> 4</label>
+                <label class="radio-inline"><input type="radio" name="optradio"> 5</label>
+                <label class="radio-inline"><input type="radio" name="optradio"> 6</label>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="datentime" class="col-12 col-sm-3 col-form-label"><strong>Date and Time</strong></label>
+              <div class="col-12 col-sm-4">
+                <input type="date" class="form-control" id="date" name="date">
+              </div>
+              <div class="col-12 col-sm-2">
+                <input type="time" class="form-control" id="time" name="time">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="options" class="col-12 col-sm-3 col-form-label"><strong>Sections </strong></label>
+              <div class="btn-group btn-group-toggle col-12 col-sm-9" data-toggle="buttons">
+                <label class="btn btn-success active">
+                  <input type="radio" name="options" id="non-smoking" checked> Non-Smoking
+                </label>
+                <label class="btn btn-success">
+                  <input type="radio" name="options" id="smoking"> Smoking
+                </label>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-12 offset-sm-3 col-sm-5">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary btn-sm">Reserve</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
   <header class="jumbotron">
       <div class="container">
           <div class="row row-header">
@@ -85,11 +145,13 @@
                   <img src="img/logo.png" class="img-fluid">
               </div>
               <div class="col-12 offset-sm-1 col-sm-2 align-self-center">
-                  <a href="#reserveForm" role="button" class="btn btn-warning nav-link btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at<br><strong>+917042854284</strong>" data-placement="bottom">Reserve Table</a>
+                  <a role="button" class="btn btn-warning nav-link btn-block" data-toggle="modal" data-target="#reserveTable">Reserve Table</a>
               </div>
           </div>
       </div>
   </header>
+
+
 
     <div class = "container">
         <div class="row row-content">
@@ -102,7 +164,7 @@
                     <div class="col-12">
                         <h3><strong>Our Lipsmacking Culinary Creations</strong></h3><br>
                     </div>
-                    <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$2.99</h2>
+                    <h2>Uthappizza <span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$2.99</h2>
                     <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                   </div>
                 </div>
@@ -141,43 +203,6 @@
             </div>
           </div>
         </div>
-
-        <div class="row row-content align-items-center">
-          <div class="col-12 offset-sm-2 col-sm-8" id="reserveForm">
-            <div class="card">
-              <h3 class="card-header bg-warning text-white">Reserve A Table</h3>
-              <div class="card-body">
-                  <form>
-                      <div class="form-group row">
-                        <label for="optradio" class="col-12 col-sm-3 col-form-label"><strong>Number of Seats</strong></label>
-                        <div class="col-12 col-sm-5">
-                          <label class="radio-inline"><input type="radio" name="optradio"> 1</label>
-                          <label class="radio-inline"><input type="radio" name="optradio"> 2</label>
-                          <label class="radio-inline"><input type="radio" name="optradio"> 3</label>
-                          <label class="radio-inline"><input type="radio" name="optradio"> 4</label>
-                          <label class="radio-inline"><input type="radio" name="optradio"> 5</label>
-                          <label class="radio-inline"><input type="radio" name="optradio"> 6</label>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="datentime" class="col-12 col-sm-3 col-form-label"><strong>Date and Time</strong></label>
-                        <div class="col-12 col-sm-4">
-                          <input type="date" class="form-control" id="date" name="date">
-                        </div>
-                        <div class="col-12 col-sm-2">
-                          <input type="time" class="form-control" id="time" name="time">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="col-12 offset-sm-3 col-sm-5">
-                          <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                      </div>
-                  </form>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
       <footer class="footer col-12">
@@ -226,11 +251,6 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
 </body>
 
 </html>
